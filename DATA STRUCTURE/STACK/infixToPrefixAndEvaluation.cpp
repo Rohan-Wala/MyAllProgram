@@ -134,6 +134,14 @@ string inToPre::convert(string infix){
 			pre[i] = ')';
 		else if(pre[i] == ')')
 			pre[i] = '(';
+		else if(pre[i] == '[')
+			pre[i] = ']';
+		else if(pre[i] == ']')
+			pre[i] = '[';
+		else if(pre[i] == '{')
+			pre[i] = '}';
+		else if(pre[i] == '}')
+			pre[i] = '{';
 	}
 	
 	//converting to postfix
@@ -225,11 +233,11 @@ int main(){
 	cin>>infix;
 	
 	prefix = ip.convert(infix);
-	cout<<"the postfix conversion of the given string is: ";
+	cout<<"the prefix conversion of the given string is: ";
 	cout<<prefix;
 	
 	result = ip.evaluation(prefix);
-	cout<<"\nthe evaluation of postfix expression is: ";
+	cout<<"\nthe evaluation of prefix expression is: ";
 	cout<<result;
 	
 	return 0;
