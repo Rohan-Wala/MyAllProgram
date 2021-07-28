@@ -30,7 +30,6 @@ int first(bool arr[], int low, int high)
     {
         // Get the middle index
         int mid = low + (high - low)/2;
-     
         // Check if the element at middle index is first 1
         if ( ( mid == 0 || arr[mid-1] == 0) && arr[mid] == 1)
             return mid;
@@ -73,7 +72,7 @@ int rowWithMax1s(bool mat[R][C])
 int main()
 {
     bool mat[R][C] = { {0, 0, 0, 1},
-                    {0, 1, 1, 0},
+                    {1, 0, 0, 0},
                     {1, 1, 1, 1},
                     {0, 0, 0, 0}};
  
