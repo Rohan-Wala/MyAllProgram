@@ -15,15 +15,14 @@ void travel(int i,int j,string s,int arr[][2],int m,int n,vector<vector<int>> &v
 	vis[i][j] = 1;
 
 //  optimized way 
-	string dir[] = {"U_","R_","D_","L_","ur","rd","dl","lu"};
+	string dir[] = {"U","R","D","L","ur","rd","dl","lu"};
 	char dirI[]= {-1,0,+1,0,-1,+1,+1,-1};
 	char dirJ[]= {0,+1,0,-1,+1,+1,-1,-1};
 					 
 	for(int d = 0;d<8;d++){
 		s += dir[d];
 		travel(i+dirI[d],j+dirJ[d],s,arr,m,n,vis);
-		s.pop_back();
-		s.pop_back();
+		s.resize(s.size() - dir[d].size());
 	}
 	
 	vis[i][j] = 0;
