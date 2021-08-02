@@ -16,6 +16,8 @@ void travel(int i,int j,string s,int arr[][2],int m,int n,vector<vector<int>> &v
 
 //  optimized way 
 	string dir[] = {"U","R","D","L","ur","rd","dl","lu"};
+	//lexicographical or alphabetical order
+	//string dir[] = {"D","dl","L","lu","R","rd","U","ur"}; 
 	char dirI[]= {-1,0,+1,0,-1,+1,+1,-1};
 	char dirJ[]= {0,+1,0,-1,+1,+1,-1,-1};
 					 
