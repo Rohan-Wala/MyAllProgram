@@ -25,8 +25,8 @@ class StaticAndInstanceVariable{
 	void display3(){
 		IPLPlayer i3 = new IPLPlayer();
 		System.out.println("name is " + " " + name2);
-		System.out.println("run is " + " " + run2);		// access to instance variable in same calss instance method ->direct 
-		System.out.println("total run is " + " " + total_run2);// access to static variable in same calss  instance method->direct 
+		System.out.println("run is " + " " + run2);	// access to instance variable in same calss instance method ->direct 
+		System.out.println("total run is " + " " + total_run2);// access to static variable in same calss instance method->direct 
 		System.out.println("total run is " + " " + i3.run);// access to instance variable in differrnct calss instance method ->object.variable
 		System.out.println("total run is " + " " + IPLPlayer.total_run);// access to static variable in differrnct calss instance method ->classname.variable
 
