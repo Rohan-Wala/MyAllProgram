@@ -1,3 +1,6 @@
+/*
+Static methods are the methods in Java that can be called without creating an object of class. They are referenced by the class name itself or reference to the Object of that class.  
+*/
 class StaticMethod{
 
 	static String s = "ABC";

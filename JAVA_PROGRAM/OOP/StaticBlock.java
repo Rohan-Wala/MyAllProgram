@@ -1,4 +1,4 @@
-
+// static bloack will run first in class evenb befor a main
 class StaticBlock{
 	static{
 		System.out.println("this is static block");

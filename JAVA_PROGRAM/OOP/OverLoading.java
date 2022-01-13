@@ -4,7 +4,11 @@ class A{
     void add(){
         System.out.println("no pare");
     }
-    void add(int a , int b){
+    void add(float a , float b){
+        System.out.println(a+b);
+    }
+
+    void add(Double a , double b){
         System.out.println(a+b);
     }
 
@@ -14,6 +18,22 @@ class A{
     void mult(double a){
         System.out.println(a*a);
     }
+    /*
+    o/p: for mult(2) : 4.0
+    Explanation:
+
+    1. When an exact match is not found for passing argument then the compiler finds the method with the smallest argument.
+    2. In the above example, float and double both belong to float category data type. Due to which an exact match is not
+        found for passing argument 2 because 2 is an integer data type.
+    Therefore, the compiler finds the method with the smallest argument float rather than double.
+    The float data type is a smaller size than double and consumes less memory.
+    */
+
+
+
+
+
+
     // this 2 methods will creat an ambiguity for add(10 , 20)
     // because it may upcast any of them,it it will gat confused to which fun to call
     // void add (int a , float b){}
@@ -29,7 +49,8 @@ class demo{
     public static void main(String[] args) {
         A a = new A();
         // a.add(10,20,30,40,50,60);
-        a.mult(2);
+        // a.mult(2);
+        a.add(10,'a');
 
     }
 }
