@@ -17,6 +17,7 @@ class IPL extends BCCI{
     }
 }
 class Demo{
+    
     public static void main(String[] args) {
         BCCI b1 = new BCCI();
 
