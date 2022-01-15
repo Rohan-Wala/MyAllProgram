@@ -30,10 +30,7 @@ class A{
     */
 
 
-
-
-
-
+    
     // this 2 methods will creat an ambiguity for add(10 , 20)
     // because it may upcast any of them,it it will gat confused to which fun to call
     // void add (int a , float b){}
@@ -50,7 +47,7 @@ class demo{
         A a = new A();
         // a.add(10,20,30,40,50,60);
         // a.mult(2);
-        a.add(10,'a');
+        // a.add(10,'a'); // it will work for float-float , double-double , but ambiguity for float-float ,int-double
 
     }
 }
