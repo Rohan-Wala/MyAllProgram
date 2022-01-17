@@ -1,3 +1,6 @@
+import javax.sql.rowset.spi.SyncFactory;
+import javax.swing.plaf.synth.SynthSplitPaneUI;
+
 class A{
     // byte - short - char - int - long - float - double
     //mthods dose not have priority in this case
@@ -42,12 +45,34 @@ class A{
         System.out.println(arg[0]+ arg[1] + arg[2] + arg[3]);
     }
 }
+
+
+/* 
+spacial case
+when we pass object of 2 different class have a parent-child realationship as a parameter to function on overloading
+and if we make a object of child by taking parent refernce the call will go to the method which have a obj of parent class
+as overloading is a complie time polimorphsim
+*/
+class B{}
+class C extends B{}
+class D{
+    void fun(B obj){
+        System.out.println("in fun B");
+    }
+    void fun(C obj){
+        System.out.println("in fun C");
+    }
+}
 class demo{
     public static void main(String[] args) {
         A a = new A();
         // a.add(10,20,30,40,50,60);
         // a.mult(2);
         // a.add(10,'a'); // it will work for float-float , double-double , but ambiguity for float-float ,int-double
+
+        B b1 = new C();
+        D d1 = new D();
+        d1.fun(b1); //in fun B
 
     }
 }
