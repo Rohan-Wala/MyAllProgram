@@ -2,7 +2,7 @@
 
 /*
 An exception is an unwanted or unexpected event, which occurs during the execution of a program i.e at run time, that disrupts the normal flow of the program’s instructions.
-
+run time exception
 1)ArithmeticException
 2)NullPointerException
 3)IndexOutOfBoundsException
@@ -10,6 +10,11 @@ An exception is an unwanted or unexpected event, which occurs during the executi
     2)StringIndexOutOfBoundsException
 4)InputMismatchException
 5)NumberFormatException
+
+compile time exception
+1) IOException = related to i/p while using bufferedreader
+2) InterruptedException = realated to threads
+3) FileNotFoundException = while working with files
 */
 import java.io.*;
 import java.util.Scanner;
@@ -27,15 +32,15 @@ class ExceptionDemo{
 }
 
 class DEMO1{
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws FileNotFoundException {
         // ExceptionDemo e1 = new ExceptionDemo();
         // e1.fun();
         
         // ExceptionDemo e2 = null; 
         // e2.fun(); //NullPointerException when obj of class is null and we try to call any method by using that object
 
-        int arr[] = {10,20,30,40};
-        String s1 = "ROHAN";
+        // int arr[] = {10,20,30,40};
+        // String s1 = "ROHAN";
         // System.out.println(arr[4]); //ArrayIndexOutOfBoundsException when we try to access any index out of range of that array
         // System.out.println(s1.charAt(5));//StringIndexOutOfBoundsException =  same as ArrayIndexOutOfBoundsException but for string
 
@@ -50,9 +55,13 @@ class DEMO1{
         //String s = new String();
 
         //String s2 = (String)o;//ClassCastException =  when we try to cast bigger class in to smaller class
+        System.out.println("start of main");
+        // Thread.sleep(5000); // this will give interruptedException as we are interrupting with system
 
 
-        System.out.println("after fun");    
+        File f= new File("ROHAN.txt");
+        // FileInputStream obj = new FileInputStream(f); //FileNotFoundException = it may happend that file may get end and start reading another file which may contain an error
+        System.out.println("endof main");    
     }
     
 }
