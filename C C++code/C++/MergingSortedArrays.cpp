@@ -49,3 +49,8 @@ for(int i=0;i<num;i++) {
 }
 return 0;
 }
+
+
+ // finding the larger element from nums1 and nums2 and placing it at it's correct position
+  // if nums1 element is greater than nums2 then replace nums1[i] with greater element and reduce the pointer i and p1 because now i will point to next position where next greater element will be filled 
+    // if nums2 element is greater than nums1 then replace nums1[i] with greater element and reduce the pointer i and p2 because now i will point to next position where next greater element will be filled 

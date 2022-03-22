@@ -16,3 +16,13 @@ class find_missing_number{
 		
 	}
 }
+/*
+
+public int missingNumber(int[] nums) {
+        
+        int sumAll = (nums.length * (nums.length+1) )/2;
+        for(int i=0;i<nums.length;i++)
+            sumAll -= nums[i];
+        return sumAll; 
+    }
+*/
